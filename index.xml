@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JINGXIAOLEI</title>
+    <link>https://jingxiaolei.com/</link>
+    <description>Recent content on JINGXIAOLEI</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 05 Nov 2016 19:56:17 +0530</lastBuildDate>
+    
+	<atom:link href="https://jingxiaolei.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>唱诗班</title>
+      <link>https://jingxiaolei.com/portfolio/work2/</link>
+      <pubDate>Sat, 05 Nov 2016 19:41:01 +0530</pubDate>
+      
+      <guid>https://jingxiaolei.com/portfolio/work2/</guid>
+      <description>&lt;p&gt;个人博客、微信公众号&lt;/p&gt;
+&lt;p&gt;changshiban.com&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Web3</title>
+      <link>https://jingxiaolei.com/portfolio/work3/</link>
+      <pubDate>Sat, 05 Nov 2016 19:44:32 +0530</pubDate>
+      
+      <guid>https://jingxiaolei.com/portfolio/work3/</guid>
+      <description>&lt;p&gt;微信公众号&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Dou Wei Music</title>
+      <link>https://jingxiaolei.com/portfolio/work4/</link>
+      <pubDate>Sat, 05 Nov 2016 19:50:47 +0530</pubDate>
+      
+      <guid>https://jingxiaolei.com/portfolio/work4/</guid>
+      <description>&lt;p&gt;多语言的窦唯音乐介绍网页&lt;/p&gt;
+&lt;p&gt;douweimusic.com&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Hello Messengers / 鸿胪寺</title>
+      <link>https://jingxiaolei.com/portfolio/work5/</link>
+      <pubDate>Sat, 05 Nov 2016 19:53:42 +0530</pubDate>
+      
+      <guid>https://jingxiaolei.com/portfolio/work5/</guid>
+      <description>&lt;p&gt;海外音乐在华发行服务、网络厂牌&lt;/p&gt;
+&lt;p&gt;hellomessengers.com&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Guide&#43;&#43;</title>
+      <link>https://jingxiaolei.com/portfolio/work6/</link>
+      <pubDate>Sat, 05 Nov 2016 19:56:17 +0530</pubDate>
+      
+      <guid>https://jingxiaolei.com/portfolio/work6/</guid>
+      <description>&lt;p&gt;信息聚合&lt;/p&gt;
+&lt;p&gt;guidexx.com&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
