@@ -26,7 +26,7 @@
       .content 唱诗班
       
       figure.image.is-128x128
-        img(src="@/assets/changshiban.jpeg")
+        img(src="@/assets/changshiban.jpg")
 
       .content changshibandotcom
 

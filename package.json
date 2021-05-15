@@ -7,8 +7,10 @@
     "build": "nuxt generate",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint": "yarn lint:js",
-    "test": "jest"
+    "test": "jest",
+    "postinstall": "./node_modules/prepush/bin/cli.js install"
   },
+  "prepush": [ "./deploy.sh" ],
   "dependencies": {
     "@nuxtjs/axios": "^5.13.1",
     "arweave": "^1.10.13",
@@ -32,6 +34,7 @@
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^7.7.0",
     "jest": "^26.6.3",
+    "prepush": "^3.1.11",
     "prettier": "^2.2.1",
     "pug": "^3.0.2",
     "pug-plain-loader": "^1.1.0",
