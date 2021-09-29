@@ -5,39 +5,58 @@
       p.title.popins JING XIAOLEI
       p.subtitle jingxiaolei.com
 
-  .container
-    .block
-      .subtitle.popins
-        b-icon(
-          pack="fas"
-          icon="link"
-          type="is-primary")
-        |  博客
-      a.content(href="https://changshiban.com") https://changshiban.com
+  section
+    b-tabs(type="is-toggle-rounded" v-model="activeTab")
+      b-tab-item(label="社交媒体" icon="google-photos")
+        .container
+          .block
+            .subtitle.popins
+              b-icon(
+                pack="fas"
+                icon="link"
+                type="is-primary")
+              |  博客
+            a.content(href="https://changshiban.com") https://changshiban.com
 
-    .block
-      .subtitle.popins
-        b-icon(
-          pack="fab"
-          icon="weixin"
-          type="is-primary")
-        |  微信公众号
-        
-      .content 唱诗班
+          .block
+            .subtitle.popins
+              b-icon(
+                pack="fab"
+                icon="weixin"
+                type="is-primary")
+              |  微信公众号
+              
+            .content 唱诗班
+            
+            figure.image.is-128x128
+              img(src="@/assets/changshiban.jpg")
+
+            .content changshibandotcom
+
+          .block
+            .subtitle.popins
+              b-icon(
+                pack="fab"
+                icon="weixin"
+                type="is-primary")
+              |  微信视频号
+
+            figure.image.is-weixin-video
+              img(src="@/assets/weixin-video.jpg")
+
+          .block(v-for="item in items")
+            .subtitle.popins
+              b-icon(
+                :pack="item.pack"
+                :icon="item.icon"
+                type="is-primary")
+              |  {{ item.title }}
+            a.content(:href="item.href") {{ item.href }}
       
-      figure.image.is-128x128
-        img(src="@/assets/changshiban.jpg")
-
-      .content changshibandotcom
-
-    .block(v-for="item in items")
-      .subtitle.popins
-        b-icon(
-          :pack="item.pack"
-          :icon="item.icon"
-          type="is-primary")
-        |  {{ item.title }}
-      a.content(:href="item.href") {{ item.href }}
+      b-tab-item(label="音乐" icon="music")
+        p 懒得写，反正到处的平台上搜 Luei 就完事
+      b-tab-item(label="还没想好" icon="video")
+        p 还没想好放啥
 </template>
 
 <script>
@@ -54,6 +73,7 @@ export default {
 
   data() {
     return {
+      activeTab: 0,
       items: [
         {
           title: '知乎',
@@ -88,10 +108,11 @@ export default {
 <style lang="stylus" scoped>
 .hero
   text-align center
+
 .container
-  width 100vw
+  width auto
   height auto
-  padding 20px
+  padding 20px 0
   text-align center
 
   .block
@@ -107,5 +128,10 @@ export default {
       color black
 
     .image
-     display inline-block
+      display inline-block
+
+    .is-weixin-video
+      width 250px
+      height auto
+      margin-bottom -30px
 </style>
