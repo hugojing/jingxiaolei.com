@@ -7,7 +7,7 @@
 
   section
     b-tabs(type="is-toggle-rounded" v-model="activeTab")
-      b-tab-item(label="社交媒体" icon="google-photos")
+      b-tab-item(label="Blog" icon="alpha-b-box")
         .container
           .block
             .subtitle.popins
@@ -17,6 +17,7 @@
                 type="is-primary")
               |  博客
             a.content(href="https://changshiban.com") https://changshiban.com
+            .tip 收录所有文章（2013-至今）
 
           .block
             .subtitle.popins
@@ -27,12 +28,26 @@
               |  微信公众号
               
             .content 唱诗班
+            .tip 镜像同步（2015-至今）
             
             figure.image.is-128x128
               img(src="@/assets/changshiban.jpg")
 
             .content changshibandotcom
 
+          .block
+            .subtitle.popins
+              b-icon(
+                pack="fab"
+                icon="zhihu"
+                type="is-primary")
+              |  知乎专栏
+              
+            a.content(href="https://changshiban.com") https://changshiban.com
+            .tip 镜像同步（2020-至今）
+
+      b-tab-item(label="社交媒体" icon="google-photos")
+        .container
           .block
             .subtitle.popins
               b-icon(
@@ -54,7 +69,27 @@
             a.content(:href="item.href") {{ item.href }}
       
       b-tab-item(label="音乐" icon="music")
-        p 懒得写，反正到处的平台上搜 Luei 就完事
+        .container
+          .block(v-for="item in music")
+            .subtitle.popins
+              b-icon(
+                :pack="item.pack"
+                :icon="item.icon"
+                type="is-primary")
+              |  {{ item.title }}
+            a.content(:href="item.href") {{ item.href }}
+
+      b-tab-item(label="网站" icon="web")
+        .container
+          .block(v-for="item in sites")
+            .subtitle.popins
+              b-icon(
+                :pack="item.pack"
+                :icon="item.icon"
+                type="is-primary")
+              |  {{ item.title }}
+            a.content(:href="item.href") {{ item.href }}
+
       b-tab-item(label="还没想好" icon="video")
         p 还没想好放啥
 </template>
@@ -93,11 +128,57 @@ export default {
           icon: 'instagram',
           href: 'https://www.instagram.com/jing_xiaolei',
         },
+        // {
+        //   title: '更多...',
+        //   pack: 'fas',
+        //   icon: 'info',
+        //   href: '正在添加中',
+        // },
+      ],
+      music: [
         {
-          title: '更多...',
+          title: 'bandcamp',
           pack: 'fas',
-          icon: 'info',
-          href: '正在添加中',
+          icon: 'link',
+          href: 'https://luei.bandcamp.com/',
+        },
+        {
+          title: 'YouTube',
+          pack: 'fas',
+          icon: 'link',
+          href: 'https://www.youtube.com/channel/UCNUa5TK9z54P4CIrSetoOqQ',
+        },
+        {
+          title: 'SoundCloud',
+          pack: 'fas',
+          icon: 'link',
+          href: 'https://www.youtube.com/channel/UCNUa5TK9z54P4CIrSetoOqQ',
+        },
+        {
+          title: 'Spotify',
+          pack: 'fas',
+          icon: 'link',
+          href: 'https://open.spotify.com/artist/3TS2ykUVTks3RNBVh1Ljia',
+        },
+        {
+          title: 'Apple Music',
+          pack: 'fas',
+          icon: 'link',
+          href: 'https://music.apple.com/artist/luei/1457799009',
+        },
+      ],
+      sites: [
+        {
+          title: 'Douwei Music',
+          pack: 'fas',
+          icon: 'link',
+          href: 'https://douweimusic.com/',
+        },
+        {
+          title: '指南加加',
+          pack: 'fas',
+          icon: 'link',
+          href: 'https://guidexx.com/',
         },
       ],
     }
@@ -120,6 +201,10 @@ export default {
     .subtitle
     .content
       margin-bottom 10px
+
+    .tip
+      font-size 14px
+      margin 10px 0
 
     .subtitle
       color #7957d5
