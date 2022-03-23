@@ -43,22 +43,11 @@
                 type="is-primary")
               |  知乎专栏
               
-            a.content(href="https://changshiban.com") https://changshiban.com
+            a.content(href="https://www.zhihu.com/column/changshiban") https://www.zhihu.com/column/changshiban
             .tip 镜像同步（2020-至今）
 
       b-tab-item(label="社交媒体" icon="google-photos")
         .container
-          .block
-            .subtitle.popins
-              b-icon(
-                pack="fab"
-                icon="weixin"
-                type="is-primary")
-              |  微信视频号
-
-            figure.image.is-weixin-video
-              img(src="@/assets/weixin-video.jpg")
-
           .block(v-for="item in items")
             .subtitle.popins
               b-icon(
@@ -90,8 +79,29 @@
               |  {{ item.title }}
             a.content(:href="item.href") {{ item.href }}
 
-      b-tab-item(label="还没想好" icon="video")
-        p 还没想好放啥
+      b-tab-item(label="短视频" icon="video")
+        .container
+          .block
+            .subtitle.popins
+              b-icon(
+                pack="fab"
+                icon="weixin"
+                type="is-primary")
+              |  微信视频号
+
+            figure.image.is-weixin-video
+              img(src="@/assets/weixin-video.jpg")
+
+      b-tab-item(label="视频" icon="movie")
+        .container
+          .block(v-for="item in movies")
+            .subtitle.popins
+              b-icon(
+                :pack="item.pack"
+                :icon="item.icon"
+                type="is-primary")
+              |  {{ item.title }}
+            a.content(:href="item.href") {{ item.href }}
 </template>
 
 <script>
@@ -99,12 +109,6 @@ export default {
   name: 'home',
 
   layout: 'blank',
-
-  head() {
-    return {
-      title: 'JING XIAOLEI',
-    }
-  },
 
   data() {
     return {
@@ -117,16 +121,16 @@ export default {
           href: 'https://www.zhihu.com/people/jingxiaolei',
         },
         {
-          title: 'Github',
-          pack: 'fab',
-          icon: 'github',
-          href: 'https://github.com/hugojing',
-        },
-        {
           title: 'Instagram',
           pack: 'fab',
           icon: 'instagram',
           href: 'https://www.instagram.com/jing_xiaolei',
+        },
+        {
+          title: 'Github',
+          pack: 'fab',
+          icon: 'github',
+          href: 'https://github.com/hugojing',
         },
         // {
         //   title: '更多...',
@@ -152,7 +156,7 @@ export default {
           title: 'SoundCloud',
           pack: 'fas',
           icon: 'link',
-          href: 'https://www.youtube.com/channel/UCNUa5TK9z54P4CIrSetoOqQ',
+          href: 'https://soundcloud.com/luei2019',
         },
         {
           title: 'Spotify',
@@ -180,7 +184,33 @@ export default {
           icon: 'link',
           href: 'https://guidexx.com/',
         },
+        {
+          title: 'The Chinese Music',
+          pack: 'fas',
+          icon: 'link',
+          href: 'https://thechinesemusic.com/',
+        },
       ],
+      movies: [
+        {
+          title: '哔哩哔哩',
+          pack: 'fas',
+          icon: 'link',
+          href: 'https://space.bilibili.com/6546179',
+        },
+        {
+          title: '西瓜视频',
+          pack: 'fas',
+          icon: 'link',
+          href: 'https://www.ixigua.com/home/198340244945864/',
+        },
+      ],
+    }
+  },
+
+  head() {
+    return {
+      title: 'JING XIAOLEI',
     }
   },
 }
