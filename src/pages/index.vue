@@ -84,6 +84,17 @@
           .block
             .subtitle.popins
               b-icon(
+                pack="fas"
+                icon="camera"
+                type="is-primary")
+              |  抖音
+
+            figure.image.is-weixin-video
+              img(src="@/assets/douyin.png")
+
+          .block
+            .subtitle.popins
+              b-icon(
                 pack="fab"
                 icon="weixin"
                 type="is-primary")
@@ -91,6 +102,17 @@
 
             figure.image.is-weixin-video
               img(src="@/assets/weixin-video.jpg")
+
+          .block
+            .subtitle.popins
+              b-icon(
+                pack="fas"
+                icon="camera"
+                type="is-primary")
+              |  快手
+
+            figure.image.is-weixin-video
+              img(src="@/assets/kuaishou.jpg")
 
       b-tab-item(label="视频" icon="movie")
         .container
@@ -121,6 +143,12 @@ export default {
           href: 'https://www.zhihu.com/people/jingxiaolei',
         },
         {
+          title: 'Quora',
+          pack: 'fab',
+          icon: 'quora',
+          href: 'https://www.quora.com/profile/JING-Zhixing',
+        },
+        {
           title: 'Instagram',
           pack: 'fab',
           icon: 'instagram',
@@ -132,12 +160,6 @@ export default {
           icon: 'github',
           href: 'https://github.com/hugojing',
         },
-        // {
-        //   title: '更多...',
-        //   pack: 'fas',
-        //   icon: 'info',
-        //   href: '正在添加中',
-        // },
       ],
       music: [
         {
@@ -203,6 +225,12 @@ export default {
           pack: 'fas',
           icon: 'link',
           href: 'https://www.ixigua.com/home/198340244945864/',
+        },
+        {
+          title: '知乎视频',
+          pack: 'fas',
+          icon: 'link',
+          href: 'https://www.zhihu.com/people/jingxiaolei/zvideos',
         },
       ],
     }
